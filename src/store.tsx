@@ -9,9 +9,10 @@ interface Props {
   setState: React.Dispatch<React.SetStateAction<State>>;
 }
 
-const AppStateContext = createContext<Props | null>(null);
 
 // comment
+const AppStateContext = createContext<Props | null>(null);
+
 export const AppStateProvider: React.FC<Props> = ({ children }) => {
   const [state, setState] = useState<State>({
     title: "teleport-project-react"
